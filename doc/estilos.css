@@ -19,6 +19,11 @@
 html{
      scroll-behavior: smooth;
      background-color: #303030;
+     color: rgb(255, 255, 255);
+}
+
+html p{
+     color: rgb(230, 230, 230);
 }
 
 a{
@@ -69,7 +74,6 @@ a{
 
 .badge{
      background: var(--color-principal);
-     color: #FFF;
      font-size: 11px;
      font-weight: 600;
      text-transform: uppercase;
@@ -186,7 +190,7 @@ a{
 /* HEADER */
 header{
      width: 100%;
-     height: calc(100vh - 95px);
+     height: calc(100vh - 96px);
      display: flex;
      justify-content: flex-start;
      align-items: center;
@@ -199,7 +203,7 @@ header .imagen-header{
      background: url(img/wallpaper.jpg);
      background-size: cover;
      background-position: center;
-     clip-path: circle(90% at 92% 50%);
+     clip-path: circle(90% at 92% 50%); /* Para hacer que se vea como un semicírculo */
      z-index: 2;
      transition: all .5s;
 }
@@ -222,8 +226,7 @@ header .content-header p{
 }
 
 
-
-/** DESTACADOS  */
+/* DESTACADOS  */
 .destacados{
      display: flex;
      justify-content: center;
@@ -240,10 +243,10 @@ header .content-header p{
      align-items: center;
      font-weight: 600;
      font-size: 12em;
-     color: rgba(0, 0, 0, 0.07);
+     color: rgba(255, 255, 255, 0.07);
 }
 
-.game{
+.anime{
      position: relative;
      width: 45%;
      height: 350px;
@@ -251,44 +254,43 @@ header .content-header p{
      display: flex;
      justify-content: flex-start;
      align-items: center;
+     border-radius: 5px;
      transition: all .5s;
 }
 
-.game:nth-child(1){
+.anime:nth-child(1){
      background: linear-gradient(45deg, #10214C, #DA3DBE);
 }
 
-.game:nth-child(2){
+.anime:nth-child(2){
      background: linear-gradient(45deg, #1A2F3F, #7094CE);
 }
 
-.game:nth-child(3){
+.anime:nth-child(3){
      background: linear-gradient(45deg, #000, #1C78B2);
 }
 
-.game:nth-child(4){
+.anime:nth-child(4){
      background: linear-gradient(45deg, #0E2B2F, #00FFFF);
 }
 
-
-.game img{
+.anime img{
      position: absolute;
      left: 50%;
      bottom: 0;
      transform: translate(-50%);
      height: 380px;
      z-index: 1;
+     filter: drop-shadow(0 0 2px #FFF);
      transition: all .5s;
 }
 
-.game:hover img{
+.anime:hover img{
      left: 75%;
      height: 400px;
 }
 
-
-
-.game .content{
+.anime .content{
      position: relative;
      width: 50%;
      left: 20%;
@@ -298,18 +300,18 @@ header .content-header p{
      transition: all .5s;
 }
 
-.game:hover .content{
+.anime:hover .content{
      left: 0;
      opacity: 1;
 }
 
-.game .content h2{
+.anime .content h2{
      text-transform: uppercase;
      font-size: 2.2em;
      line-height: 1em;
 }
 
-.game .content a{
+.anime .content a{
      position: relative;
      color: #000;
      background: #FFF;
@@ -317,14 +319,13 @@ header .content-header p{
      padding: 10px 20px;
      margin-top: 10px;
      font-weight: 700;
+     border-radius: 2px;
 }
 
 
+/* ARTICULOS */
 
-
-/** ARTICULOS */
-
-/*? Titulo de articulo */
+/* Titulo de articulo */
 .title{
      position: relative;
      display: flex;
@@ -344,7 +345,7 @@ header .content-header p{
      font-weight: 600;
      font-size: 12em;
      z-index: -1;
-     color: rgba(0, 0, 0, 0.1);
+     color: rgba(255, 255, 255, 0.07);
 }
 
 .title h1{
